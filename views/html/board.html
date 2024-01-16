@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Board</title>
+</head>
+<body>
+    <div class="main-container">
+            <div class="top-container">
+                <div class="top-title">
+                    <a href="/">GDSC BACKEND UNIT</a>
+                </div>
+            </div>
+        <div class="middle-container">
+            <div class="board-container">
+                <div class="board-title">
+                    {{title}}
+                </div>
+                <div class="board-content">
+                    {{content}}
+                </div>
+                <div class="update-delete">
+                        <a href="/board/create/{{num}}"><input type="button" value="수정"></a>
+                    <form action="/post/board/delete" method="POST" >
+                        <input type="hidden" name="num" value="{{num}}">
+                        <input type="submit" value="삭제">
+                    </form>
+                </div>
+                
+            </div>
+        </div>  
+    </div>
+    
+    
+</body>
+</html>

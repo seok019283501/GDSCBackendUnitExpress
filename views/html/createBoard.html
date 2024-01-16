@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Board</title>
+</head>
+<body>
+    <div class="main-container">
+            <div class="top-container">
+                <div class="top-title">
+                    <a href="/">GDSC BACKEND UNIT</a>
+                </div>
+            </div>
+        <div class="middle-container">
+            <div class="create-container">
+                {% if num != "create" %}
+                    <form action="/post/board/update" method="post">
+                        <input type="text" name="title" maxlength="50" class="title" value="{{title}}">
+                        <textarea name="content" class="content">{{content}}</textarea>
+                        <input type="hidden" name="num" value="{{num}}">
+                        <input type="submit">
+                    </form>
+                {% else %}
+                    <form action="/post/board/create" method="post">
+                        <input type="text" name="title" maxlength="50" class="title">
+                        <textarea name="content" class="content"></textarea>
+                        <input type="submit">
+                    </form>
+                {% endif %}
+                    
+            </div>
+        </div>  
+    </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>List</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="top-container">
+            <div class="top-title">
+                <a href="/">GDSC BACKEND UNIT</a>
+            </div>
+        </div>
+        <div class="middle-container">
+            <div class="list-container">
+                <div class="menu">
+                    <div class="create">
+                        <a href="/board/create/create">글쓰기</a>
+                    </div>
+                    <div class="list">
+                        {% for list in boardList %}
+                        
+                        <div class="board-item">제목 : <a href="/board/{{list.num}}">
+                            {% if list.title === '' %}
+                            제목없음
+                            {% else %}
+                                {{list.title}}
+                            {% endif %}
+                        </a> </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+    
+</body>
+</html>
