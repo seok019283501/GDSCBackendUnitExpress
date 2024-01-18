@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {renderMain,renderBoard,renderCreateBoard} = require('../controllers/page');
+const {renderMain,renderBoard,renderCreateBoard} = require('../controllers/pageController');
 
 router.use((req,res,next)=>{
 

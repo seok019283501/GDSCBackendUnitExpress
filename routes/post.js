@@ -1,6 +1,6 @@
 const express = require('express');
 // const multer = require('multer');
-const {isCreateBorad,isDeleteBorad,isUpdateBorad} = require('../controllers/post');
+const {isCreateBorad,isDeleteBorad,isUpdateBorad} = require('../controllers/postControler');
 
 const router = express.Router();
 
